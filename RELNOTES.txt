@@ -1,0 +1,66 @@
+                             Release Notes for
+                     Helix Swarm Docker Configuration
+
+                              Version 0.1.0
+
+Introduction
+
+    Helix Swarm (hereafter referred to as "Swarm") enables collaboration
+    and code review for teams using Helix VCS that will help your teams ship
+    quality software faster.
+    
+    This contains Docker configuration for Swarm, allowing it to be rapidly
+    deployed into new environments. This configuration is currently in
+    TECHNICAL PREVIEW, and isn't fully supported.
+    
+    Helix Swarm uses a YYYY.R release numbering (e.g. 2021.1), see the
+    release notes for that product for a detailed explanation. The Docker
+    configuration is not tightly tied to Swarm product releases however.
+    
+    The release numbering for the Docker configuration follows a
+    <major>.<minor>.<patch> format, e.g. 1.0.2.
+
+---------------------------------------------------------------------------
+
+Documentation
+
+    For documentation, see the README.md file included in this release.
+
+
+Installation and Supported Platforms
+
+    These configurations have been tested against docker-compose 1.28.4
+    and docker 20.10.5 on Ubuntu Linux 20.04.
+
+License
+
+    Please see the separate "LICENSE" file, a peer to this file.
+
+Known Limitations
+
+    This is a TECHNICAL PREVIEW that has not been tested for production
+    deployment.
+
+
+--------------------------------------------------------------------------
+Important Notices
+
+    This is a TECHNICAL PREVIEW, and it is not recommended that it is used
+    for production deployments. Future versions may change in a way that
+    is incompatible with this version.
+    
+    It is meant for testing, and using as a basic for a customer's own
+    configurations.
+    
+
+
+--------------------------------------------------------------------------
+Major new functionality in 0.1.0
+
+    #2112249 (Bug 106010)
+        Added Docker support for Helix Swarm.
+
+
+--------------------------------------------------------------------------
+
+END
