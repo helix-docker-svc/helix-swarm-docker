@@ -1,4 +1,4 @@
-[![Support](https://img.shields.io/badge/Support-Community-yellow.svg)]
+![Support](https://img.shields.io/badge/Support-Community-yellow.svg)
 
 # Helix Swarm Docker Environment
 

@@ -1,0 +1,6 @@
+.p4config
+.p4ignore
+.env
+storage/
+containers/**/Version
+.directory
