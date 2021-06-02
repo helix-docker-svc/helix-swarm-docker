@@ -3,7 +3,7 @@
 # Swarm in a docker environment.                                            #
 # ========================================================================= #
 
-FROM helix-base-ubuntu20:2021.1
+FROM perforce/helix-base-ubuntu20:latest
 LABEL vendor="Perforce Software"
 LABEL maintainer="Swarm Team (support@perforce.com)"
 

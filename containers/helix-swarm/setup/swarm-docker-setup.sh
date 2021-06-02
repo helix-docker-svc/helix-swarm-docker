@@ -6,7 +6,7 @@ SETUPDIR="/opt/perforce/setup"
 LOG="${SWARM_HOME}/data/docker.log"
 
 function log {
-    echo $(date +"%Y/%m/%d %H:%M:%S") - $@ 
+    echo $(date +"%Y/%m/%d %H:%M:%S") - $@
 }
 
 log "--"

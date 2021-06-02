@@ -1,5 +1,8 @@
 
-build:
+.env:
+	cp env.dist .env
+
+build: .env
 	cp Version containers/helix-swarm
 	docker-compose build
 	
@@ -31,6 +34,9 @@ log:
 
 tail:
 	docker logs -f `docker ps | grep helix.swarm | cut -d " " -f 1`
+	
+test:
+	docker-compose run helix.swarm sleep 900
 
 
 #

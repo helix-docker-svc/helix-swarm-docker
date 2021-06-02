@@ -6,16 +6,25 @@ Welcome to the Perforce Software Swarm Docker environment. This environment
 is built for public use and is for customers that want to test Swarm in a 
 pre-setup environment.
 
-This Docker environment is built using Helix Swarm 2021.1.
+This Docker environment is built using Helix Swarm 2021.1, Docker 20.10.5,
+and docker-compose 1.28.4. It is recommended that at least these versions
+of the tools are used.
 
-This is a **TECHNICAL PREVIEW** and not tested for production use.
+This is a **TECHNICAL PREVIEW** and not tested for production use. It's
+purpose is to gain feedback from our customers so that we can determine
+the use cases to which it would be put, and tweak the configuration in
+order to improve its usability.
+
+This does mean that there is a chance the configuration will change
+dramatically over the next few releases, and we do not guarantee backwards
+compatibility.
 
 There are two use cases that are supported, starting up Swarm against a clean
 P4D system (one which has not had Swarm configured against it), and starting
 Swarm using an existing configuration. These are described below.
 
-Note that the provided Makefile is for use on Linux, and may work on Mac. If
-you're on Windows, we recommend running the docker commands manually.
+Note that the provided Makefile is for use on Linux, and may work on Mac.
+These images have not been tested on Windows.
 
 ---
 
@@ -94,8 +103,9 @@ following variables:
 | SWARM_PASSWD     | HelixDockerBay94  | Swarm user password      |
 | SWARM_MAILHOST   | localhost         | Mail server address      |
 | SWARM_HOST       | helix.swarm       | Hostname of Swarm server |
-| PUBLIC_HTTP      | 8666              | Port Swarm is exposed on |
+| PUBLIC_HTTP      | 80                | Port Swarm is exposed on |
 | SWARM_FORCE_EXT  | n                 | Set to 'y' to overwrite extensions |
+| SWARM_VER        | latest            | Only 'latest' supported  |
 
 Once these have been set, then the Docker containers can be built and
 started with the following commands:
@@ -133,8 +143,13 @@ Once the Swarm container is up and running, and Swarm is working, the
 only entry in the .env file that is still needed is `PUBLIC_HTTP`. At the
 very least, you may want to remove the passwords from this file.
 
-If the P4D server is a Linux server, and no Swarm extensions are configured
-on it, then Swarm extensions will be automatically installed.
+If the P4D server is a Linux server, and there are no Swarm triggers and
+no Swarm extensions are configured on it, then Swarm extensions will be 
+automatically installed.
+
+Server side extensions are a new feature of P4D which are more efficient
+than triggers, and don't require an external language environment such
+as Perl. They are not currently supported on Windows versions of P4D.
 
 If the SWARM_FORCE_EXT environment variable is set to "y", then any existing
 Swarm extensions will be removed, and new ones always installed.

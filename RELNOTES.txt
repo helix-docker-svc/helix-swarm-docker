@@ -52,6 +52,9 @@ Important Notices
     It is meant for testing, and using as a basic for a customer's own
     configurations.
     
+    The installation will attempt to install a server side extension rather
+    than a trigger against the P4D server. Swarm server side extensions are
+    also in TECHNICAL PREVIEW.
 
 
 --------------------------------------------------------------------------
