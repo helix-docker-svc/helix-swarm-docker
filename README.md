@@ -6,7 +6,7 @@ Welcome to the Perforce Software Swarm Docker environment. This environment
 is built for public use and is for customers that want to test Swarm in a 
 pre-setup environment.
 
-This Docker environment is built using Helix Swarm 2021.1, Docker 20.10.5,
+This Docker environment is built using Helix Swarm 2021.2, Docker 20.10.5,
 and docker-compose 1.28.4. It is recommended that at least these versions
 of the tools are used.
 
