@@ -5,7 +5,7 @@
 
 FROM ubuntu:focal
 LABEL vendor="Perforce Software"
-LABEL maintainer="Swarm Team (support@perforce.com)"
+LABEL maintainer="Swarm Team (https://github.com/perforce/helix-swarm-docker)"
 ARG P4REPO="deb http://package.perforce.com/apt/ubuntu focal release"
 
 RUN \

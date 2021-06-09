@@ -5,7 +5,7 @@
 
 FROM perforce/helix-base-ubuntu20:latest
 LABEL vendor="Perforce Software"
-LABEL maintainer="Swarm Team (support@perforce.com)"
+LABEL maintainer="Swarm Team (https://github.com/perforce/helix-swarm-docker)"
 
 ARG SWARM_VER
 ARG PKGV
